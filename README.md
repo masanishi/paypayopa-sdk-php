@@ -66,7 +66,7 @@ include('PATH_TO_SDK_FOLDER/Client.php');
 $client = new Client([
     'API_KEY' => 'YOUR_API_KEY',
     'API_SECRET'=>'YOUR_API_SECRET',
-	'MERCHANT_ID'=>'YOUR_MERCHANT_ID'
+    'MERCHANT_ID'=>'YOUR_MERCHANT_ID'
 ]);
 
 ```
@@ -104,7 +104,7 @@ $OrderItems = [];
 $OrderItems[] = (new OrderItem())
     ->setName('Cake')
     ->setQuantity(1)
-    ->setUnitPrice('amount' => 20, 'currency' => 'JPY']);
+    ->setUnitPrice(['amount' => 20, 'currency' => 'JPY']);
 $CQCPayload->setOrderItems($OrderItems);
 
 // Save Cart totals
